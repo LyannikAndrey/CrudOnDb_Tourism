@@ -99,6 +99,9 @@
     <Compile Include="Windows\AddEditTour_point.xaml.cs">
       <DependentUpon>AddEditTour_point.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ReportOrder.xaml.cs">
+      <DependentUpon>ReportOrder.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AddEditTour_point.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ReportOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

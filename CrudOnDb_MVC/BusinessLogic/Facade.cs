@@ -168,37 +168,44 @@ namespace CrudOnDb_MVC.BusinessLogic
             searcher.Search();
         }
 
-        public void ShowTables()
+        public void ShowTables(bool report)
         {
-            if (TableComboBox.Text == "Клиент")
+            if (!report)
             {
-                ClientPattern();
-                searcher.InitSearchCombobox();
+                if (TableComboBox.Text == "Клиент")
+                {
+                    ClientPattern();
+                    searcher.InitSearchCombobox();
+                }
+                if (TableComboBox.Text == "Сотрудник")
+                {
+                    EmployeePattern();
+                    searcher.InitSearchCombobox();
+                }
+                if (TableComboBox.Text == "Отель")
+                {
+                    HotelPattern();
+                    searcher.InitSearchCombobox();
+                }
+                if (TableComboBox.Text == "Заказ")
+                {
+                    OrderPattern();
+                    searcher.InitSearchCombobox();
+                }
+                if (TableComboBox.Text == "Точка остановки")
+                {
+                    Tour_pointPattern();
+                    searcher.InitSearchCombobox();
+                }
+                if (TableComboBox.Text == "Тур")
+                {
+                    TourPattern();
+                    searcher.InitSearchCombobox();
+                }
             }
-            if (TableComboBox.Text == "Сотрудник")
+            else
             {
-                EmployeePattern();
-                searcher.InitSearchCombobox();
-            }
-            if (TableComboBox.Text == "Отель")
-            {
-                HotelPattern();
-                searcher.InitSearchCombobox();
-            }
-            if (TableComboBox.Text == "Заказ")
-            {
-                OrderPattern();
-                searcher.InitSearchCombobox();
-            }
-            if (TableComboBox.Text == "Точка остановки")
-            {
-                Tour_pointPattern();
-                searcher.InitSearchCombobox();
-            }
-            if (TableComboBox.Text == "Тур")
-            {
-                TourPattern();
-                searcher.InitSearchCombobox();
+                ReportOrderPattern();
             }
         }
         /// <summary>
@@ -230,6 +237,13 @@ namespace CrudOnDb_MVC.BusinessLogic
             DirectorMain.ClearGrid();
             DirectorMain.CommitEdit();
             DirectorMain.ConstructOrderGrid();
+        }
+
+        private void ReportOrderPattern()
+        {
+            DirectorMain.ClearGrid();
+            DirectorMain.CommitEdit();
+            DirectorMain.ConstructReportOrderGrid();
         }
 
         private void Tour_pointPattern()

@@ -147,6 +147,13 @@ namespace CrudOnDb_MVC.BusinessLogic
             builder.BuildColumns(new List<string>() { "Заказчик", "Сотрудник", "Тур", "Дата регистрации" },
                 new List<string>() { "Clients", "Employees", "Tours.Country", "DateOfRegistration" });
         }
+        public void ConstructReportOrderGrid()
+        {
+            builder.BuildBaseSetings();
+            builder.BuildConnection(db.Orders.ToList());
+            builder.BuildColumns(new List<string>() { "Заказчик", "Сотрудник", "Тур", "Дата регистрации", "Стоимость" },
+                new List<string>() { "Clients", "Employees", "Tours.Country", "DateOfRegistration", "Tours.Tour_cost" });
+        }
 
         public void ConstructTour_PointGrid()
         {

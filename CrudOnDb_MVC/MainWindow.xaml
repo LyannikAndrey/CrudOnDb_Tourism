@@ -29,10 +29,11 @@
         <Button Grid.Column="1" x:Name="AddButton" Content="Добавить" HorizontalAlignment="Right" Margin="0,286,74,0" VerticalAlignment="Top" Width="142" Click="AddButton_Click" Height="49"/>
         <Button Grid.Column="1" x:Name="EditButton" Content="Редактировать" HorizontalAlignment="Right" Margin="0,340,74,0" VerticalAlignment="Top" Width="142" Click="EditButton_Click" Height="49"/>
         <Button Grid.Column="1" x:Name="DeleteButton" Content="Удалить" HorizontalAlignment="Right" Margin="0,394,74,0" VerticalAlignment="Top" Width="142" Click="DeleteButton_Click" Height="49" />
+        <Button Grid.Column="1" x:Name="ReportButton" Content="Отчёт" HorizontalAlignment="Right" Margin="0,115,74,0" VerticalAlignment="Top"   Width="142" Click="ReportButton_Click" Height="49" Visibility="Visible"/>
 
-        
 
-        
+
+
 
     </Grid>
 </Window>

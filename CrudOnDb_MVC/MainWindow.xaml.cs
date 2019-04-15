@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows;
 using CrudOnDb_MVC.BusinessLogic;
 using CrudOnDb_MVC.Models;
+using  CrudOnDb_MVC.Windows;
 
 namespace CrudOnDb_MVC
 {
@@ -17,6 +18,7 @@ namespace CrudOnDb_MVC
         public MainWindow()
         {
             InitializeComponent();
+            ReportButton.Visibility = Visibility.Hidden;
             db = new TourismDB();
             f = new Facade(db, dataGrid, TableComboBox, SearchComboBox, SearchTextBox);
         }
@@ -42,7 +44,16 @@ namespace CrudOnDb_MVC
 
         private void ShowTableButton_Click(object sender, RoutedEventArgs e)
         {
-            f.ShowTables();
+            if (TableComboBox.Text == "Заказ")
+            {
+                ReportButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ReportButton.Visibility = Visibility.Hidden;
+            }
+
+            f.ShowTables(false);
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +64,11 @@ namespace CrudOnDb_MVC
             }
             catch { MessageBox.Show("Некорректные данные для поиска"); }
         }
-        
+
+        private void ReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReportOrder reportOrder = new ReportOrder(db);
+            reportOrder.Show();
+        }
     }
 }
