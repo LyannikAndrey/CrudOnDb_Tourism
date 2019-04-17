@@ -60,7 +60,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddHotel(new Hotels(byte.Parse(RatingtextBox.Text), NametextBox.Text, int.Parse(HotelCosttextBox.Text), TypeRoomtextBox.Text, AccomtextBox.Text, FoodtextBox.Text, AddressetextBox.Text));
                 }
             }
-            catch (Exception) { MessageBox.Show("Неплохая попытка..."); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }

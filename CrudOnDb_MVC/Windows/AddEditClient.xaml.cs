@@ -59,7 +59,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddClient(new Clients(SurnameTextBox.Text, NameTextBox.Text, PatronymicTextBox.Text, PhoneTextBox.Text, EmailTextBox.Text, AddressTextBox.Text));
                 }
             }
-            catch (Exception) { MessageBox.Show("Error!"); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }

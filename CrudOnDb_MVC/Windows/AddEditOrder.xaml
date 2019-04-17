@@ -12,10 +12,9 @@
         <Label x:Name="label3" Content="Сотрудник" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="ClientcomboBox" HorizontalAlignment="Left" Margin="162,35,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="TourcomboBox" HorizontalAlignment="Left" Margin="162,66,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="DatetextBox" HorizontalAlignment="Left" Height="23" Margin="162,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="DatetextBox" HorizontalAlignment="Left" Height="25" Margin="162,96,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="EmplcomboBox" HorizontalAlignment="Left" Margin="162,128,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="button" Content="Сохранить" Margin="0,170,-2,1" Background="#FFFFB900" Click="button_Click"/>
-
 
     </Grid>
 </Window>

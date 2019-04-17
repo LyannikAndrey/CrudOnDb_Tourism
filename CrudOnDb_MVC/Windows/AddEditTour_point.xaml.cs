@@ -60,7 +60,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddTour_point(new Tour_point(((Tours)CountrycomboBox.SelectedItem).Tour_ID, ((Hotels)HotelcomboBox.SelectedItem).Hotel_ID, ((Transports)TranscomboBox.SelectedItem).Transport_ID, CitytextBox.Text));
                 }
             }
-            catch (Exception) { MessageBox.Show("Неплохая попытка..."); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }

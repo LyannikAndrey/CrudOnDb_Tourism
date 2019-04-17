@@ -61,7 +61,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddOrder(new Orders(((Clients)ClientcomboBox.SelectedItem).Client_ID, ((Tours)TourcomboBox.SelectedItem).Tour_ID, DateTime.Parse(DatetextBox.Text), ((Employees)EmplcomboBox.SelectedItem).Employee_ID));
                 }
             }
-            catch (Exception) { MessageBox.Show("Неплохая попытка..."); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }

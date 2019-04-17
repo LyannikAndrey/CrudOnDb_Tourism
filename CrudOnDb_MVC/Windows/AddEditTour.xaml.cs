@@ -60,7 +60,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddTour(new Tours(CountrytextBox.Text, DateTime.Parse(ArrDatetextBox.Text), DateTime.Parse(DepDatetextBox.Text), double.Parse(CosttextBox.Text), int.Parse(PeopletextBox.Text), TypetextBox.Text));
                 }
             }
-            catch (Exception) { MessageBox.Show("Неплохая попытка..."); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }

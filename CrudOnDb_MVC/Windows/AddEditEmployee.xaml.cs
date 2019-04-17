@@ -59,7 +59,8 @@ namespace CrudOnDb_MVC.Windows
                     f.add.AddEmployee(new Employees(SurnameTextBox.Text, NameTextBox.Text, PatronymicTextBox.Text, PhoneTextBox.Text, EmailTextBox.Text));
                 }
             }
-            catch (Exception) { MessageBox.Show("Неплохая попытка..."); }
+            catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}"); }
+
             this.Close();
         }
     }
