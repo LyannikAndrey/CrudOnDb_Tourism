@@ -31,7 +31,7 @@ namespace CrudOnDb_MVC.Windows
                 sum += tours[i].Tour_cost;
             }
 
-            totalSumLabel.Content = $"Общая сумма: {sum:F}";
+            totalSumLabel.Content = "Общая сумма: " + sum.ToString("F");
         }
     }
 }

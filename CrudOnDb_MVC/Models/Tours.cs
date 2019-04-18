@@ -25,7 +25,7 @@ namespace CrudOnDb_MVC.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Tour_ID { get; set; }
 
         [Required]

@@ -24,7 +24,7 @@ namespace CrudOnDb_MVC.Models
 
         [Key]
         [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Tour_point_ID { get; set; }
 
         public int? Transport_ID { get; set; }

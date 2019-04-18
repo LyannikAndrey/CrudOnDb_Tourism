@@ -24,7 +24,7 @@ namespace CrudOnDb_MVC.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Hotel_ID { get; set; }
 
         public byte Rating { get; set; }
