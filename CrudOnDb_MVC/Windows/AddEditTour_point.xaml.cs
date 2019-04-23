@@ -53,11 +53,11 @@ namespace CrudOnDb_MVC.Windows
             {
                 if (edit)
                 {
-                    f.edd.EditTour_Point(index, new Tour_point(((Tours)CountrycomboBox.SelectedItem).Tour_ID, ((Hotels)HotelcomboBox.SelectedItem).Hotel_ID, ((Transports)TranscomboBox.SelectedItem).Transport_ID, CitytextBox.Text));
+                    f.edd.EditTour_Point(index, new Tour_point(((Tours)CountrycomboBox.SelectedItem).Tour_ID, ((Transports)TranscomboBox.SelectedItem).Transport_ID, ((Hotels)HotelcomboBox.SelectedItem).Hotel_ID, CitytextBox.Text));
                 }
                 else
                 {
-                    f.add.AddTour_point(new Tour_point(((Tours)CountrycomboBox.SelectedItem).Tour_ID, ((Hotels)HotelcomboBox.SelectedItem).Hotel_ID, ((Transports)TranscomboBox.SelectedItem).Transport_ID, CitytextBox.Text));
+                    f.add.AddTour_point(new Tour_point(((Tours)CountrycomboBox.SelectedItem).Tour_ID, ((Transports)TranscomboBox.SelectedItem).Transport_ID, ((Hotels)HotelcomboBox.SelectedItem).Hotel_ID, CitytextBox.Text));
                 }
             }
             catch (Exception ex) { MessageBox.Show($"Error!\n {ex.Message}\n {ex}"); }

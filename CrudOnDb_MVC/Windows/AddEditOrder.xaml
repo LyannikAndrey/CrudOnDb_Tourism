@@ -3,17 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="AddEditOrder" Height="271" Width="300">
+        Title="AddEditOrder" Height="271" Width="338.469">
     <Grid>
         <Label x:Name="label" Content="Клиент" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Тур" HorizontalAlignment="Left" Margin="20,66,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Дата регистрации" HorizontalAlignment="Left" Margin="20,97,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Сотрудник" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ClientcomboBox" HorizontalAlignment="Left" Margin="162,35,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="TourcomboBox" HorizontalAlignment="Left" Margin="162,66,0,0" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="DatetextBox" HorizontalAlignment="Left" Height="25" Margin="162,96,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="EmplcomboBox" HorizontalAlignment="Left" Margin="162,128,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ClientcomboBox" Margin="162,35,10,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="TourcomboBox" Margin="162,66,10,0" VerticalAlignment="Top"/>
+        <DatePicker  x:Name="DatetextBox" Height="25" Margin="162,96,10,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="EmplcomboBox" Margin="162,128,10,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Сохранить" Margin="0,170,-2,1" Background="#FFFFB900" Click="button_Click"/>
 
     </Grid>

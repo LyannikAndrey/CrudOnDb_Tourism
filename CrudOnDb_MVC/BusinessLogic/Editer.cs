@@ -72,11 +72,10 @@ namespace CrudOnDb_MVC.BusinessLogic
         public void EditTour_Point(int index, Tour_point tourPoint)
         {
             DirectorMain.CommitEdit();
-            db.Tour_point.ToList()[index].Tour_ID = tourPoint.Tour_ID;
-//            db.SaveChanges();
             db.Tour_point.ToList()[index].City = tourPoint.City;
-            db.Tour_point.ToList()[index].Tour_ID = tourPoint.Tour_ID;
             db.Tour_point.ToList()[index].Hotel_ID = tourPoint.Hotel_ID;
+            db.Tour_point.ToList()[index].Tour_ID = tourPoint.Tour_ID;
+            db.Tour_point.ToList()[index].Transport_ID = tourPoint.Transport_ID;
             db.SaveChanges();
             DirectorMain.ClearGrid();
             DirectorMain.ConstructTour_PointGrid(db.Tour_point.ToList());
